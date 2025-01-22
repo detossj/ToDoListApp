@@ -1,0 +1,161 @@
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif; /* o la fuente que prefieras */
+    color: white;
+    padding: 20px;
+
+}
+span{
+    margin: 30px;
+}
+
+li {
+    list-style: none;       /* Elimina los puntos o viñetas */
+}
+
+input {
+    font-size: 20px;
+    padding: 10px 20px; /* Mejora la altura y anchura del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px;
+
+}
+ 
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+
+
+.App {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    column-gap: 50px;
+    
+
+}
+
+.App h1{
+    text-align: center;
+    grid-column: span 2; /* Hace que el h1 ocupe ambas columnas */
+    margin: 30px;
+    color: rgb(255, 162, 0);
+    font-size: 40px;
+}
+
+
+.App .TodoList{
+    grid-column: 1;
+    text-align: left;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    height: 300px;  /* Altura fija */
+    overflow-y: auto;  /* Permite desplazamiento vertical si el contenido es más grande */
+    
+}
+
+.App .TodoAdd{
+    grid-column: 2;
+    text-align: center;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    height: 300px;  /* Altura fija */
+
+
+}
+
+
+.App .TodoList button,
+.App .TodoAdd button {
+    font-size: 20px;
+    padding: 10px 20px; /* Mejora la altura y anchura del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para efectos de hover */
+    margin: 10px;
+}
+
+/* Botón de la lista de tareas */
+.App .TodoList button {
+    background-color: #ff4d4d; /* Rojo más suave */
+    color: white;
+}
+
+/* Efecto de hover para el botón de la lista de tareas */
+.App .TodoList button:hover {
+    background-color: #e60000; /* Rojo más oscuro */
+    transform: scale(1.05); /* Ligeramente más grande */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil al pasar el cursor */
+}
+
+/* Botón para agregar tarea */
+.App .TodoAdd button {
+    background-color: #ffa500; /* Naranja */
+    color: white;
+}
+
+/* Efecto de hover para el botón de agregar tarea */
+.App .TodoAdd button:hover {
+    background-color: #e68900; /* Naranja más oscuro */
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+
+/* Estilo para los checkboxes */
+input[type="checkbox"] {
+    width: 20px;  /* Tamaño del checkbox */
+    height: 20px;
+    border: 2px solid #ffa500;  /* Color del borde */
+    border-radius: 5px;  /* Bordes redondeados */
+    background-color: #2a2a2a;  /* Fondo gris oscuro */
+    cursor: pointer;  /* Cursor tipo puntero */
+    transition: background-color 0.3s, border-color 0.3s;  /* Transiciones suaves */
+}
+
+/* Cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+    background-color: #ffa500;  /* Fondo naranja cuando está marcado */
+    border-color: #e68900;  /* Borde naranja más oscuro */
+}
+
+/* Efecto al pasar el cursor sobre el checkbox */
+input[type="checkbox"]:hover {
+    background-color: #333;  /* Fondo más oscuro al pasar el cursor */
+    border-color: #ff6600;  /* Borde más brillante */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        margin: 0;
+        padding: 0;
+        max-width: auto;
+    }
+    
+
+
+    .App {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en columna */
+        align-items: center; /* Centra los elementos */
+        justify-content: center;
+        padding: 20px; /* Aumenta el relleno para espacio */
+        gap: 30px; /* Espacio entre los elementos */
+    }
+
+    span{
+        margin: 10px;
+    }
+
+
+}
